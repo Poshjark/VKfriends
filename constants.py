@@ -10,6 +10,7 @@ API_MAIN_REF = "https://api.vk.com/method/"
 API_VK_VERSION = "5.131"
 DEFAULT_LANGUAGE = 0
 
+
 def DEFAULT_REPORT_PATH() -> str:
     return path.dirname(getcwd())
 

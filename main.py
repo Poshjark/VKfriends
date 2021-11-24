@@ -1,12 +1,9 @@
 import sys
-from funcs import *
+import getters
 from time import time
-
-
-# Реализовать сбор друзей по списку id, отсортированному по алфавиту
-# 1616930
-
+import funcs
 
 if __name__ == "__main__":
-    get_friends()
+    options = getters.get_options()
+    funcs.get_friends(options, friends_num_in_one_request=1000)
 
