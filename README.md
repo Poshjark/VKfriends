@@ -2,8 +2,8 @@ This app is created to get friends list for required user.
 
 For users
 To run the application you need an installed python interpreter.
-Also some not standart libraries are required:
-1) requests
+Before first execution, after python interpreter reinstalling or after changing virtual enviroment (python venv) run following command in your command line(windows) / terminal(linux):
+pip install -r requirements.txt
 
 On start it requires few params:
 1) User access_token (Instruction how to get it is given below)
@@ -27,13 +27,13 @@ This app is created just to give tokens and it doesn't save, doesn't aggregate a
 https://vkhost.github.io/
 
 Choose one of represented apps and click its button.
-Press "Allow" and copy long sequence of digits and characters between "access_token=" and "&expires_in"
+Press "Allow"/"Разрешить" and copy long sequence of digits and characters between "access_token=" and "&expires_in"
 This is your user access token. Note its lifetime usually is 24 hours(86400 seconds) from request time.
 Note: I am not related with this apps and don't know how do they aggregate issued permissions.
 
 For developers.
 How it works:
-Firstly script requests input data: access_token, user_id, report_format and report_path. Each option is processed with it's own getter where it's also being checked.
+Firstly script requests input data: access_token, user_id, report_format and report_path. Each parameter is requested from user by its own getter(from getters.py) where this option is being checked too with specific rules.
 For example user_id must be integer and this profile mustn't be private or deactivated. 
 Then this options are passed to get_friends() function. 
 This function process these options and requests friends list from VK API. 
