@@ -26,7 +26,17 @@ def write_to_file(report_path: str, fields: tuple, user: dict = None, report_for
         return "No permission"
     if user is None:
         if head_or_tail == "head":
-            str_to_write = FORMATS[report_format]["file_start"]
+            if FORMATS[report_format]["file_start"] == "fields":
+                str_list = list()
+                for field in fields:
+                    if type(field) is dict:
+                        str_list.append(list(field.keys())[0])
+                    else:
+                        str_list.append(field)
+                str_to_write = FORMATS[report_format]["options_separator"].join(str_list)
+                str_to_write += FORMATS[report_format]["object_separator"]
+            else:
+                str_to_write = FORMATS[report_format]["file_start"]
         elif head_or_tail == "tail":
             str_to_write = FORMATS[report_format]["file_end"]
         else:

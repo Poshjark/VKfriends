@@ -8,7 +8,6 @@ import testers
 DEBUG = False
 
 
-
 def get_token() -> str:
     token = input("Enter token:\t")
     test_response = requests.get(
@@ -66,8 +65,7 @@ def get_report_format() -> str:
     report_format = input("Enter format of report(csv,tsv,json) or leave blank for default(csv): ")
     if report_format == "":
         report_format = "csv"
-    print(formatters.FORMATS.keys())
-    while report_format not in formatters.FORMATS.keys() :
+    while report_format not in formatters.FORMATS.keys():
         report_format = input("Please choose one of the three formats (csv,json,tsv):")
         if report_format == "exit":
             sys.exit(1)

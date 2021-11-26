@@ -1,5 +1,4 @@
 import sys
-
 import getters
 import funcs
 

@@ -93,7 +93,7 @@ FORMATS = {"json":
                 "object_separator": "\n",
                 "object_start": "",
                 "object_end": "",
-                "file_start": "",
+                "file_start": "fields",
                 "file_end": "",
                 "formatter": format_to_symbol_separated
                 },
@@ -102,7 +102,7 @@ FORMATS = {"json":
                 "object_separator": "\n",
                 "object_start": "",
                 "object_end": "",
-                "file_start": "",
+                "file_start": "fields",
                 "file_end": "",
                 "formatter": format_to_symbol_separated
                 },
