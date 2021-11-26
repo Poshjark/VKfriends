@@ -3,6 +3,7 @@ This app is created to get friends list for required user.
 For users
 To run the application you need an installed python interpreter.
 Before first execution, after python interpreter reinstalling or after changing virtual enviroment (python venv) run following command in your command line(windows) / terminal(linux):
+
 pip install -r requirements.txt
 
 On start it requires few params:
