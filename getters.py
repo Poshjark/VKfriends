@@ -64,12 +64,14 @@ def get_user_id(token: str) -> str:
 
 def get_report_format() -> str:
     report_format = input("Enter format of report(csv,tsv,json) or leave blank for default(csv): ")
-    while report_format not in formatters.FORMATS.keys():
+    if report_format == "":
+        report_format = "csv"
+    print(formatters.FORMATS.keys())
+    while report_format not in formatters.FORMATS.keys() :
+        print(f"'{report_format}'")
         report_format = input("Please choose one of the three formats (csv,json,tsv):")
         if report_format == "exit":
             sys.exit(1)
-    if report_format == "":
-        report_format = "csv"
     return report_format
 
 
