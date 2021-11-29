@@ -14,7 +14,7 @@ Anyway if requested user profile is private, deleted or banned, program will rep
 3) Report format. Now three formats are implemented to give report in: csv(Comma Separated Values), tsv(Tabulate Separated Values)
 and json(JavaScript Object Notation). Just type on of them. Default  - csv
 4) Path to report. Directory where to save the report. Default - work directory where scripts is called from.
-
+At this stage you can type "exit" without brackets to exit execution and terminate it.
 
 How to get user access token.
 There are two similar ways:
